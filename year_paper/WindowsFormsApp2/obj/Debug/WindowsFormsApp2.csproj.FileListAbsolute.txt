@@ -6,4 +6,9 @@ C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
-C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.MainForm.resources
+C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.StatForm.resources
+C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CopyComplete
