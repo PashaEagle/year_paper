@@ -28,6 +28,7 @@ namespace WindowsFormsApp2
             button1.Text = "Підкинути";
             button2.Text = "Статистика";
             button3.Text = "...";
+            button4.Text = "Пройти тест";
             pictureBox1.Visible = false;
             pictureBox2.Visible = false;
             pictureBox3.Visible = false;
@@ -152,6 +153,12 @@ namespace WindowsFormsApp2
             StatForm statForm = new StatForm();
             statForm.Show();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TestForm testForm = new TestForm();
+            testForm.Show();
         }
     }
 }

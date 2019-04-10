@@ -12,3 +12,5 @@ C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CopyComplete
+C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.TestForm.resources
+C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.TestResultsForm.resources

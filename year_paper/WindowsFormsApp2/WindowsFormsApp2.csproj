@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TestParticipant.cs" />
+    <Compile Include="TestQuestion.cs" />
     <Compile Include="Experiment.cs" />
     <Compile Include="CoinProperties.cs" />
     <Compile Include="DiceProperties.cs" />
@@ -66,6 +68,18 @@
     <Compile Include="StatForm.Designer.cs">
       <DependentUpon>StatForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestResultsForm.Designer.cs">
+      <DependentUpon>TestResultsForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +90,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StatForm.resx">
       <DependentUpon>StatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestResultsForm.resx">
+      <DependentUpon>TestResultsForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
