@@ -63,7 +63,7 @@
             this.bOpen.Name = "bOpen";
             this.bOpen.Size = new System.Drawing.Size(131, 41);
             this.bOpen.TabIndex = 1;
-            this.bOpen.Text = "bOpen";
+            this.bOpen.Text = "Редагувати з файлу..";
             this.bOpen.UseVisualStyleBackColor = true;
             this.bOpen.Click += new System.EventHandler(this.bOpen_Click);
             // 
@@ -97,7 +97,7 @@
             this.bAddNew.Name = "bAddNew";
             this.bAddNew.Size = new System.Drawing.Size(98, 41);
             this.bAddNew.TabIndex = 38;
-            this.bAddNew.Text = "bAddNew";
+            this.bAddNew.Text = "Добавити";
             this.bAddNew.UseVisualStyleBackColor = true;
             this.bAddNew.Click += new System.EventHandler(this.bAddNew_Click);
             // 
@@ -116,7 +116,7 @@
             this.bDelete.Name = "bDelete";
             this.bDelete.Size = new System.Drawing.Size(98, 41);
             this.bDelete.TabIndex = 36;
-            this.bDelete.Text = "bDelete";
+            this.bDelete.Text = "Видалити";
             this.bDelete.UseVisualStyleBackColor = true;
             this.bDelete.Click += new System.EventHandler(this.bDelete_Click);
             // 
@@ -126,7 +126,7 @@
             this.bEdit.Name = "bEdit";
             this.bEdit.Size = new System.Drawing.Size(131, 41);
             this.bEdit.TabIndex = 35;
-            this.bEdit.Text = "bEdit";
+            this.bEdit.Text = "Редагувати";
             this.bEdit.UseVisualStyleBackColor = true;
             this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
             // 
@@ -163,7 +163,7 @@
             this.bSaveQuestion.Name = "bSaveQuestion";
             this.bSaveQuestion.Size = new System.Drawing.Size(131, 41);
             this.bSaveQuestion.TabIndex = 34;
-            this.bSaveQuestion.Text = "bSaveQuestion";
+            this.bSaveQuestion.Text = "Зберегти питання";
             this.bSaveQuestion.UseVisualStyleBackColor = true;
             this.bSaveQuestion.Click += new System.EventHandler(this.bSaveQuestion_Click);
             // 
@@ -253,7 +253,7 @@
             this.bSaveAs.Name = "bSaveAs";
             this.bSaveAs.Size = new System.Drawing.Size(131, 41);
             this.bSaveAs.TabIndex = 19;
-            this.bSaveAs.Text = "bSaveAs";
+            this.bSaveAs.Text = "Зберегти як..";
             this.bSaveAs.UseVisualStyleBackColor = true;
             this.bSaveAs.Click += new System.EventHandler(this.bSaveAs_Click);
             // 
@@ -263,7 +263,7 @@
             this.bSave.Name = "bSave";
             this.bSave.Size = new System.Drawing.Size(131, 41);
             this.bSave.TabIndex = 18;
-            this.bSave.Text = "bSave";
+            this.bSave.Text = "Зберегти";
             this.bSave.UseVisualStyleBackColor = true;
             this.bSave.Click += new System.EventHandler(this.bSave_Click);
             // 
@@ -273,7 +273,7 @@
             this.bBack.Name = "bBack";
             this.bBack.Size = new System.Drawing.Size(131, 41);
             this.bBack.TabIndex = 16;
-            this.bBack.Text = "bBack";
+            this.bBack.Text = "Назад";
             this.bBack.UseVisualStyleBackColor = true;
             // 
             // bCreate
@@ -282,7 +282,7 @@
             this.bCreate.Name = "bCreate";
             this.bCreate.Size = new System.Drawing.Size(131, 41);
             this.bCreate.TabIndex = 17;
-            this.bCreate.Text = "bCreate";
+            this.bCreate.Text = "Створити новий тест";
             this.bCreate.UseVisualStyleBackColor = true;
             this.bCreate.Click += new System.EventHandler(this.bCreate_Click);
             // 
@@ -292,7 +292,7 @@
             this.bExport.Name = "bExport";
             this.bExport.Size = new System.Drawing.Size(131, 41);
             this.bExport.TabIndex = 18;
-            this.bExport.Text = "bExport";
+            this.bExport.Text = "Експорт в Word-файл";
             this.bExport.UseVisualStyleBackColor = true;
             this.bExport.Click += new System.EventHandler(this.bExport_Click);
             // 

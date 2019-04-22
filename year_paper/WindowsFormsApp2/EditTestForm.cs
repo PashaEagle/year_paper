@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Xceed.Words.NET;
 
 namespace WindowsFormsApp2
 {
@@ -254,10 +255,37 @@ namespace WindowsFormsApp2
         private void bExport_Click(object sender, EventArgs e)
         {
             SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Title = "Створення файлу з питаннями";
+            dialog.FileName = "Питання";
+            dialog.DefaultExt = "docx";
+            dialog.Filter = "DOCX |*.docx";
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                Global.currentTestFilePath = dialog.FileName;
+                var doc = DocX.Create(dialog.FileName);
+                string title = "Питання";
+                string textParagraph = "";
+
+                Xceed.Words.NET.Formatting titleFormat = new Xceed.Words.NET.Formatting();
+                titleFormat.Size = 26;
+                titleFormat.Position = 40;
+                titleFormat.FontColor = System.Drawing.Color.Navy;
+                titleFormat.Italic = true;
+                titleFormat.Bold = true;
+
+
+                Xceed.Words.NET.Formatting textParagraphFormat = new Xceed.Words.NET.Formatting();
+                textParagraphFormat.Size = 10;
+
+                foreach (TestQuestion temp in Global.currentTestQuestions)
+                {
+                    textParagraph += temp.question + Environment.NewLine + Environment.NewLine;
+                }
+
+                Paragraph paragraphTitle = doc.InsertParagraph(title, false, titleFormat);
+                paragraphTitle.Alignment = Alignment.center;
+                doc.InsertParagraph(textParagraph, false, textParagraphFormat);
                 
+                doc.Save();
 
                 MessageBox.Show("Файл з питаннями збережено");
             }

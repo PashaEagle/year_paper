@@ -19,3 +19,4 @@ C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.BeforeTestForm.resources
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.EditTestForm.resources
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.TeacherForm.resources
+C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Xceed.Words.NET.dll
