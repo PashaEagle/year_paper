@@ -30,7 +30,43 @@ namespace WindowsFormsApp2
             {
                 dataGridView1.Rows[i].Cells[0].Value = (i + 1);
                 dataGridView1.Rows[i].Cells[1].Value = exp.experimentType;
-                dataGridView1.Rows[i].Cells[2].Value = exp.result;
+
+                Image temp;
+                switch (exp.result)
+                {
+                    case "Gerb":
+                        temp = Global.coinPictures[0];
+                        break;
+
+                    case "Reshka":
+                        temp = Global.coinPictures[1];
+                        break;
+
+                    case "1":
+                        temp = Global.dicePictures[0];
+                        break;
+
+                    case "2":
+                        temp = Global.dicePictures[1];
+                        break;
+
+                    case "3":
+                        temp = Global.dicePictures[2];
+                        break;
+
+                    case "4":
+                        temp = Global.dicePictures[3];
+                        break;
+
+                    case "5":
+                        temp = Global.dicePictures[4];
+                        break;
+
+                    default:
+                        temp = Global.dicePictures[5];
+                        break;
+                }
+                dataGridView1.Rows[i].Cells[2].Value = temp;
                 dataGridView1.Rows[i++].Cells[3].Value = exp.date;
             }
         }

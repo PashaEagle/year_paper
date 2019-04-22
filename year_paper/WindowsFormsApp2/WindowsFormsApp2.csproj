@@ -47,6 +47,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AfterTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AfterTestForm.Designer.cs">
+      <DependentUpon>AfterTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalyzeTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalyzeTestForm.Designer.cs">
+      <DependentUpon>AnalyzeTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeforeTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeforeTestForm.Designer.cs">
+      <DependentUpon>BeforeTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTestForm.Designer.cs">
+      <DependentUpon>EditTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherForm.Designer.cs">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestParticipant.cs" />
     <Compile Include="TestQuestion.cs" />
     <Compile Include="Experiment.cs" />
@@ -80,6 +110,18 @@
     <Compile Include="TestResultsForm.Designer.cs">
       <DependentUpon>TestResultsForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AfterTestForm.resx">
+      <DependentUpon>AfterTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnalyzeTestForm.resx">
+      <DependentUpon>AnalyzeTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BeforeTestForm.resx">
+      <DependentUpon>BeforeTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTestForm.resx">
+      <DependentUpon>EditTestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StatForm.resx">
       <DependentUpon>StatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherForm.resx">
+      <DependentUpon>TeacherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
