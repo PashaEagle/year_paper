@@ -26,5 +26,10 @@ namespace WindowsFormsApp2
         {
             new EditTestForm().Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new TestResultsForm().Show();
+        }
     }
 }

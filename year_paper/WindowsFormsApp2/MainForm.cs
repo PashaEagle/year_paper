@@ -108,6 +108,8 @@ namespace WindowsFormsApp2
             button4.Text = "Я студент, пройти тест";
             button5.Text = "Я вчитель";
 
+            label3.Visible = false;
+
             if (!File.Exists(Global.pathToDefaultStatsFile))
             {
                 Global.experiments = new List<Experiment>();
@@ -116,6 +118,17 @@ namespace WindowsFormsApp2
             {
                 string json = File.ReadAllText(Global.pathToDefaultStatsFile);
                 Global.experiments = JsonConvert.DeserializeObject<List<Experiment>>(json);
+                Console.WriteLine(json);
+            }
+
+            if (!File.Exists(Global.pathToDefaultParticipantFile))
+            {
+                Global.participants = new List<TestParticipant>();
+            }
+            else
+            {
+                string json = File.ReadAllText(Global.pathToDefaultParticipantFile);
+                Global.participants = JsonConvert.DeserializeObject<List<TestParticipant>>(json);
                 Console.WriteLine(json);
             }
         }
@@ -148,6 +161,7 @@ namespace WindowsFormsApp2
         private void timer1_Tick(object sender, EventArgs e)
         {
             Console.WriteLine("Timer ticked !! " + CoinProperties.timeThatPassed + " of " + CoinProperties.timeForJuggling);
+            int amount; 
 
             for (int i = 1; i < 10; ++i)
             {
@@ -157,6 +171,7 @@ namespace WindowsFormsApp2
             if (CoinProperties.timeThatPassed++ < CoinProperties.timeForJuggling) timer1.Enabled = true;
             else
             {
+                amount = 0;
                 for (int i = 1; i < 10; ++i)
                 {
                     if (images[i] != null)
@@ -164,12 +179,15 @@ namespace WindowsFormsApp2
                         string result = images[i].Image == Global.coinPictures[0] ? "Gerb" : "Reshka";
                         Experiment thisExperiment = new Experiment(ExperimentType.Coin, result, DateTime.Now.ToString());
                         Global.experiments.Add(thisExperiment);
+                        amount++;
                     }
                 }
 
                 var json = JsonConvert.SerializeObject(Global.experiments);
                 File.WriteAllText(Global.pathToDefaultStatsFile, json);
 
+                label3.Text = "Імовірність випадання такої комбінації = " + ((double)1.0 / Math.Pow(2, amount)) * 100 + " %";
+                label3.Visible = true;
                 timer1.Enabled = false;
             }
 
@@ -178,7 +196,7 @@ namespace WindowsFormsApp2
         private void timer2_Tick(object sender, EventArgs e)
         {
             Console.WriteLine("Timer 2ticked !!" + DiceProperties.timeThatPassed + " " + DiceProperties.timeForJuggling);
-
+            int amount;
             for (int i = 1; i < 10; ++i)
             {
                 if (images[i] != null) images[i].Image = Global.dicePictures[rand.Next(0, DiceProperties.possibleExodusNumber)];
@@ -187,6 +205,7 @@ namespace WindowsFormsApp2
             if (DiceProperties.timeThatPassed++ < DiceProperties.timeForJuggling) timer2.Enabled = true;
             else
             {
+                amount = 0;
                 for (int i = 1; i < 10; ++i)
                 {
                     if (images[i] != null)
@@ -198,6 +217,7 @@ namespace WindowsFormsApp2
                         else if (images[i].Image == Global.dicePictures[3]) result = "4";
                         else if (images[i].Image == Global.dicePictures[4]) result = "5";
                         else result = "6";
+                        amount++;
 
                         Experiment thisExperiment = new Experiment(ExperimentType.Dice, result, DateTime.Now.ToString());
                         Global.experiments.Add(thisExperiment);
@@ -208,6 +228,8 @@ namespace WindowsFormsApp2
                 var json = JsonConvert.SerializeObject(Global.experiments);
                 File.WriteAllText(Global.pathToDefaultStatsFile, json);
 
+                label3.Text = "Імовірність випадання такої комбінації = " + ((double)1.0 / Math.Pow(6, amount)) * 100 + " %";
+                label3.Visible = true;
                 timer2.Enabled = false;
             }
         }
@@ -227,8 +249,7 @@ namespace WindowsFormsApp2
 
         private void button5_Click(object sender, EventArgs e)
         {
-            TeacherForm teacherForm = new TeacherForm();
-            teacherForm.Show();
+            new PasswordForm().Show();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)

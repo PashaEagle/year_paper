@@ -76,10 +76,15 @@ namespace WindowsFormsApp2
         {
             if (radioButton1.Checked || radioButton2.Checked || radioButton3.Checked || radioButton4.Checked)
             {
+                Global.correctAnswers[Global.currentQuestionIndex] = true;
                 if (Global.random10Questions[Global.currentQuestionIndex].correctAnswer == 1 && radioButton1.Checked) Global.finalPoints += 0.5;
                 else if (Global.random10Questions[Global.currentQuestionIndex].correctAnswer == 2 && radioButton2.Checked) Global.finalPoints += 0.5;
                 else if (Global.random10Questions[Global.currentQuestionIndex].correctAnswer == 3 && radioButton3.Checked) Global.finalPoints += 0.5;
                 else if (Global.random10Questions[Global.currentQuestionIndex].correctAnswer == 4 && radioButton4.Checked) Global.finalPoints += 0.5;
+                else
+                {
+                    Global.correctAnswers[Global.currentQuestionIndex] = false;
+                }
 
                 Global.currentQuestionIndex++;
                 RefreshQuestion();

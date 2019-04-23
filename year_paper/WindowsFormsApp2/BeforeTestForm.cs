@@ -52,16 +52,16 @@ namespace WindowsFormsApp2
                 {
                     string json = File.ReadAllText(Global.currentTestFilePath);
                     Global.currentTestQuestions = JsonConvert.DeserializeObject<List<TestQuestion>>(json);
+
+                    if (Global.currentTestQuestions.Count < 10)
+                    {
+                        MessageBox.Show("В цьому файлі менше 10 питань, виберіть інший");
+                        return;
+                    }
                 }
                 catch(Exception ee)
                 {
                     MessageBox.Show("Помилка при завантаженні. Можливо файл пошкоджено");
-                    return;
-                }
-                
-                if (Global.currentTestQuestions.Count < 10)
-                {
-                    MessageBox.Show("В цьому файлі менше 10 питань, виберіть інший");
                     return;
                 }
 
@@ -77,6 +77,7 @@ namespace WindowsFormsApp2
             {
                 Global.activeParticipantName = textBox1.Text;
                 Global.activeParticipantGroup = textBox2.Text;
+                Global.correctAnswers = new bool[10];
 
                 ActiveForm.Visible = false;
 

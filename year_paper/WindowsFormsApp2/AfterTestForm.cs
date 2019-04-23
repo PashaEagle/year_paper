@@ -24,7 +24,6 @@ namespace WindowsFormsApp2
             button2.Text = "Детальніше";
 
             label1.Text = "Ваш результат " + Global.finalPoints.ToString() + " балів";
-//            label1.Location = new Point(ActiveForm.Width / 4, ActiveForm.Height / 3);
             Global.participants.Add(new TestParticipant(Global.activeParticipantName, Global.activeParticipantGroup, Global.finalPoints, DateTime.Now.ToString()));
 
             var json = JsonConvert.SerializeObject(Global.participants);

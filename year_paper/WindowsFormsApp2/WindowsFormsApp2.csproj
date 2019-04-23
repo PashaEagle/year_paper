@@ -74,6 +74,12 @@
     <Compile Include="EditTestForm.Designer.cs">
       <DependentUpon>EditTestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordForm.Designer.cs">
+      <DependentUpon>PasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeacherForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordForm.resx">
+      <DependentUpon>PasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -187,6 +196,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\reshka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\274c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tick_Mark_icon-icons.com_69146.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

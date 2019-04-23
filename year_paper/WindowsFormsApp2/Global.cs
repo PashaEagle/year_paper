@@ -20,6 +20,7 @@ namespace WindowsFormsApp2
         public static double finalPoints;
         public static string activeParticipantName;
         public static string activeParticipantGroup;
+        public static bool[] correctAnswers = new bool[10];
 
         //### Open Test Properties ###
         public static int maxQuestionsLimit = 30;
@@ -35,5 +36,7 @@ namespace WindowsFormsApp2
         public static Image[] coinPictures = new Image[2];
         public static Image[] dicePictures = new Image[6];
 
+        ///### Password for teacher ###
+        public static string password = "test";
     }
 }
