@@ -98,17 +98,15 @@ namespace WindowsFormsApp2
         {
             InitializeCoordsArray();
             InitializePicturesArray();
-            numericUpDown1_ValueChanged(this, e);
+            numericUpDown1_ValueChanged_1(this, e);
 
             label1.Text = "Виберіть експеримент";
             label2.Text = "Виберіть к-сть підкидань";
             button1.Text = "Підкинути";
-            button2.Text = "Статистика";
-            button3.Text = "...";
-            button4.Text = "Я студент, пройти тест";
-            button5.Text = "Я вчитель";
-
+            label4.Visible = false;
             label3.Visible = false;
+
+            toolStripStatusLabel1.Text = DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString() + "   " + DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
 
             if (!File.Exists(Global.pathToDefaultStatsFile))
             {
@@ -130,31 +128,6 @@ namespace WindowsFormsApp2
                 string json = File.ReadAllText(Global.pathToDefaultParticipantFile);
                 Global.participants = JsonConvert.DeserializeObject<List<TestParticipant>>(json);
                 Console.WriteLine(json);
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            switch (comboBox1.Text)
-            {
-                case "Монета":
-
-                    CoinProperties.timeForJuggling = rand.Next(CoinProperties.minAmountOfJuggles, CoinProperties.maxAmountOfJuggles);
-                    CoinProperties.timeThatPassed = 0;
-
-                    timer1.Enabled = true;
-
-                    break;
-
-                case "Кубик":
-                    
-                    DiceProperties.timeForJuggling = rand.Next(DiceProperties.minAmountOfJuggles, DiceProperties.maxAmountOfJuggles);
-                    DiceProperties.timeThatPassed = 0;
-
-                    timer2.Enabled = true;
-
-                    break;
             }
         }
 
@@ -186,7 +159,9 @@ namespace WindowsFormsApp2
                 var json = JsonConvert.SerializeObject(Global.experiments);
                 File.WriteAllText(Global.pathToDefaultStatsFile, json);
 
-                label3.Text = "Імовірність випадання такої комбінації = " + ((double)1.0 / Math.Pow(2, amount)) * 100 + " %";
+                label4.Text = "P = 1/(k^n) * 100%, де k- к-сть можливих наслідків, n- число елементів";
+                label4.Visible = true;
+                label3.Text = "Ймовірність випадання такої комбінації = " + Math.Round((((double)1.0 / Math.Pow(2, amount)) * 100),6) + " %";
                 label3.Visible = true;
                 timer1.Enabled = false;
             }
@@ -227,32 +202,44 @@ namespace WindowsFormsApp2
 
                 var json = JsonConvert.SerializeObject(Global.experiments);
                 File.WriteAllText(Global.pathToDefaultStatsFile, json);
-
-                label3.Text = "Імовірність випадання такої комбінації = " + ((double)1.0 / Math.Pow(6, amount)) * 100 + " %";
+                label4.Text = "P = 1/(k^n) * 100%, де k- к-сть можливих наслідків, n- число елементів";
+                label4.Visible = true;
+                label3.Text = "Ймовірність випадання такої комбінації = " + Math.Round((((double)1.0 / Math.Pow(6, amount)) * 100),6) + " %";
                 label3.Visible = true;
                 timer2.Enabled = false;
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+      
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            StatForm statForm = new StatForm();
-            statForm.Show();
+            switch (comboBox1.Text)
+            {
+                case "Монета":
+
+                    CoinProperties.timeForJuggling = rand.Next(CoinProperties.minAmountOfJuggles, CoinProperties.maxAmountOfJuggles);
+                    CoinProperties.timeThatPassed = 0;
+
+                    timer1.Enabled = true;
+
+                    break;
+
+                case "Кубик":
+
+                    DiceProperties.timeForJuggling = rand.Next(DiceProperties.minAmountOfJuggles, DiceProperties.maxAmountOfJuggles);
+                    DiceProperties.timeThatPassed = 0;
+
+                    timer2.Enabled = true;
+
+                    break;
+                    default:  { MessageBox.Show("Виберіть тип експерименту!"); break; }
+             }
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            BeforeTestForm beforeTestForm = new BeforeTestForm();
-            beforeTestForm.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            new PasswordForm().Show();
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void numericUpDown1_ValueChanged_1(object sender, EventArgs e)
         {
             int amount = (int)numericUpDown1.Value;
             for (int i = 0; i < 10; ++i)
@@ -282,9 +269,66 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            numericUpDown1_ValueChanged(this, e);
+            numericUpDown1_ValueChanged_1(this, e);
+        }
+
+        private void електроннийПыдручникToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("Електр підр ТЙ для ПІ.docx");
+            }
+            catch (Exception )
+            { }
+        }
+
+        private void студентToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BeforeTestForm beforeTestForm = new BeforeTestForm();
+            beforeTestForm.Show();
+        }
+
+        private void викладачToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new PasswordForm().Show();
+        }
+
+        private void проПрограмуToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StatForm statForm = new StatForm();
+            statForm.Show();
+        }
+
+        private void типовіЗадачіToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://yukhym.com/uk/kontrolni-z-jmovirnosti/rozv-iazky-zavdan-z-teorii-imovirnosti.html");
+
+        }
+
+        private void терміниToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void історичніПостатіToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=0j9ZFMiDqtA");
+        }
+
+        private void проПрограмуToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Developer developer = new Developer();
+            developer.Show();
+        }
+
+      
+
+        private void TimeNow_Tick_1(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = DateTime.Now.Day.ToString() +"/"+ DateTime.Now.Month.ToString()+ "/"+ DateTime.Now.Year.ToString()+ "   " + DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+            TimeNow.Start();
         }
     }
 }

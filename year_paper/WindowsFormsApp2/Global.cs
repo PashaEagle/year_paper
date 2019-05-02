@@ -8,6 +8,7 @@ namespace WindowsFormsApp2
 {
     class Global
     {
+        public static string pathToDefaultStatisticFile = "statist.json";
         public static string pathToDefaultStatsFile = "stats.json";
         public static string pathToDefaultParticipantFile = "participants.json";
         public static List<Experiment> experiments = new List<Experiment>();

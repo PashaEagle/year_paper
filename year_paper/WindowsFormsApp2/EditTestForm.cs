@@ -46,7 +46,7 @@ namespace WindowsFormsApp2
 
         private void EditTestForm_Load(object sender, EventArgs e)
         {
-            panel1.Visible = false;
+            panel1.Enabled = false;
 
             bDelete.Enabled = false;
             bEdit.Enabled = false;
@@ -55,69 +55,6 @@ namespace WindowsFormsApp2
             rb2.Text = "Відповідь #2";
             rb3.Text = "Відповідь #3";
             rb4.Text = "Відповідь #4";
-        }
-
-        private void bOpen_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Title = "Вибір файлу з питаннями";
-            dialog.FileName = "";
-
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                Global.currentTestFilePath = dialog.FileName;
-                Global.currentTestQuestions = new List<TestQuestion>();
-                try
-                {
-                    string json = File.ReadAllText(Global.currentTestFilePath);
-                    Global.currentTestQuestions = JsonConvert.DeserializeObject<List<TestQuestion>>(json);
-                    Console.WriteLine(json);
-                }
-                catch (Exception ee)
-                {
-                    MessageBox.Show("Помилка при завантаженні. Можливо файл пошкоджено");
-                    return;
-                }
-
-                if (Global.currentTestQuestions == null)
-                {
-                    MessageBox.Show("Відбулась помилка при завантаженні. Файл пустий ?");
-                    return;
-                }
-
-                panel1.Visible = true;
-                bOpen.Enabled = false;
-                bCreate.Enabled = false;
-                bBack.Enabled = false;
-                panel2.Enabled = false;
-
-                RefreshQBox();
-
-            }
-        }
-
-        private void bCreate_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog dialog = new SaveFileDialog();
-            dialog.Title = "Створення файлу з питаннями";
-            dialog.FileName = "file";
-            dialog.DefaultExt = "json";
-            dialog.Filter = "JSON |*.json";
-
-            if (dialog.ShowDialog() == DialogResult.OK)
-            {
-                Global.currentTestFilePath = dialog.FileName;
-                Global.currentTestQuestions = new List<TestQuestion>();
-
-                File.Create(Global.currentTestFilePath);
-
-                panel1.Visible = true;
-                bOpen.Enabled = false;
-                bCreate.Enabled = false;
-                bBack.Enabled = false;
-                panel2.Enabled = false;
-
-            }
         }
 
         private void bEdit_Click(object sender, EventArgs e)
@@ -174,7 +111,7 @@ namespace WindowsFormsApp2
             }
             else
             {
-                MessageBox.Show("Будь ласка заповніть всі поля і відмідьте правиьну відповідь");
+                MessageBox.Show("Будь ласка заповніть всі поля і відмітьте правиьну відповідь");
             }
         }
 
@@ -190,6 +127,9 @@ namespace WindowsFormsApp2
             File.WriteAllText(Global.currentTestFilePath, json);
 
             MessageBox.Show("Файл з питаннями збережено");
+            назадToolStripMenuItem.Enabled = true;
+            редагуватиНаявнийToolStripMenuItem.Enabled = true;
+            створитиНовийToolStripMenuItem.Enabled = true;
         }
 
         private void bSaveAs_Click(object sender, EventArgs e)
@@ -216,6 +156,9 @@ namespace WindowsFormsApp2
 
                 MessageBox.Show("Файл з питаннями збережено");
             }
+            назадToolStripMenuItem.Enabled = true;
+            редагуватиНаявнийToolStripMenuItem.Enabled = true;
+            створитиНовийToolStripMenuItem.Enabled = true;
         }
 
         private void bAddNew_Click(object sender, EventArgs e)
@@ -289,6 +232,77 @@ namespace WindowsFormsApp2
 
                 MessageBox.Show("Файл з питаннями збережено");
             }
+            назадToolStripMenuItem.Enabled = true;
+            редагуватиНаявнийToolStripMenuItem.Enabled = true;
+            створитиНовийToolStripMenuItem.Enabled = true;
+        }
+
+        private void редагуватиНаявнийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "Вибір файлу з питаннями";
+            dialog.FileName = "";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                Global.currentTestFilePath = dialog.FileName;
+                Global.currentTestQuestions = new List<TestQuestion>();
+                try
+                {
+                    string json = File.ReadAllText(Global.currentTestFilePath);
+                    Global.currentTestQuestions = JsonConvert.DeserializeObject<List<TestQuestion>>(json);
+                    Console.WriteLine(json);
+                }
+                catch (Exception ee)
+                {
+                    MessageBox.Show("Помилка при завантаженні. Можливо файл пошкоджено");
+                    return;
+                }
+
+                if (Global.currentTestQuestions == null)
+                {
+                    MessageBox.Show("Відбулась помилка при завантаженні. Файл пустий ?");
+                    return;
+                }
+
+                panel1.Enabled = true;
+                редагуватиНаявнийToolStripMenuItem.Enabled = false;
+                створитиНовийToolStripMenuItem.Enabled = false;
+                назадToolStripMenuItem.Enabled = false;
+                panel2.Enabled = false;
+
+                RefreshQBox();
+
+            }
+        }
+
+        private void створитиНовийToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Title = "Створення файлу з питаннями";
+            dialog.FileName = "file";
+            dialog.DefaultExt = "json";
+            dialog.Filter = "JSON |*.json";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                Global.currentTestFilePath = dialog.FileName;
+                Global.currentTestQuestions = new List<TestQuestion>();
+
+                File.Create(Global.currentTestFilePath);
+
+                panel1.Visible = true;
+                редагуватиНаявнийToolStripMenuItem.Enabled = false;
+                створитиНовийToolStripMenuItem.Enabled = false;
+                назадToolStripMenuItem.Enabled = false;
+                panel2.Enabled = false;
+
+            }
+        }
+
+        private void назадToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ActiveForm.Close();
         }
     }
 }

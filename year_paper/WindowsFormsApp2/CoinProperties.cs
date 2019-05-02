@@ -7,10 +7,6 @@ namespace WindowsFormsApp2
 {
     class CoinProperties
     {
-        public static bool coin1Gerb = true;
-        public static bool coin2Gerb = true;
-        public static bool coin3Gerb = true;
-
         public static int timeForJuggling;
         public static int timeThatPassed;
 

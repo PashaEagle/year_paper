@@ -10,7 +10,7 @@ namespace WindowsFormsApp2
         public static int timeForJuggling;
         public static int timeThatPassed;
 
-        public static int minAmountOfJuggles = 11;
+        public static int minAmountOfJuggles = 10;
         public static int maxAmountOfJuggles = 21;
 
         public static int possibleExodusNumber = 6;

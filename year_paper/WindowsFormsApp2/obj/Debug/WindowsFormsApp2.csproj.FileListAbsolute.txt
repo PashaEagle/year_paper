@@ -21,3 +21,24 @@ C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.TeacherForm.resources
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Xceed.Words.NET.dll
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.PasswordForm.resources
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Xceed.Words.NET.dll
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csprojResolveAssemblyReference.cache
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AnalyzeTestForm.resources
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.BeforeTestForm.resources
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.EditTestForm.resources
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.MainForm.resources
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.PasswordForm.resources
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.StatForm.resources
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.TestForm.resources
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.TestResultsForm.resources
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.Cache
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Developer.resources

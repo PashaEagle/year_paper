@@ -19,8 +19,7 @@ namespace WindowsFormsApp2
 
         private void TestResultsForm_Load(object sender, EventArgs e)
         {
-            button1.Text = "Назад";
-            button2.Text = "Очистити";
+           
             dataGridView1.RowCount = Global.participants.Count;
             int i = 0;
             foreach (TestParticipant par in Global.participants)
@@ -32,12 +31,12 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             ActiveForm.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void toolStripButton2_Click(object sender, EventArgs e)
         {
             if (File.Exists(Global.pathToDefaultParticipantFile)) File.Delete(Global.pathToDefaultParticipantFile);
             Global.participants = new List<TestParticipant>();

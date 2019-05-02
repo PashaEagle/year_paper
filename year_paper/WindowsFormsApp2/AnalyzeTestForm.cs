@@ -18,7 +18,7 @@ namespace WindowsFormsApp2
 
         private void AnalyzeTestForm_Load(object sender, EventArgs e)
         {
-            button1.Text = "Повернутьись";
+            //button1.Text = "Назад";
             dataGridView1.RowCount = Global.random10Questions.Count;
 
             for (int i = 0; i < 10; ++i)
@@ -31,7 +31,9 @@ namespace WindowsFormsApp2
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+      
+
+        private void button2_Click(object sender, EventArgs e)
         {
             ActiveForm.Close();
         }

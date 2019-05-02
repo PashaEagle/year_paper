@@ -26,11 +26,7 @@ namespace WindowsFormsApp2
             label2.Text = "Введіть групу: ";
             label3.Text = "Файл з питаннями не вибрано";
             label3.ForeColor = Color.Red;
-
             button1.Text = "Вибрати файл";
-            button2.Text = "Назад";
-            button3.Text = "Почати тестування";
-
             button3.Enabled = false;
         }
 
@@ -87,6 +83,21 @@ namespace WindowsFormsApp2
             {
                 MessageBox.Show("Заповніть всі поля");
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
