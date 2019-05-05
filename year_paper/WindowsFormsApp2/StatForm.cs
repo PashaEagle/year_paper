@@ -117,19 +117,17 @@ namespace WindowsFormsApp2
                 return;
             }
 
+            if (Global.experiments.Count == 0) return;
+            if (Global.experiments[0].date == null) { MessageBox.Show("Неможливо завнтажити, можливо файл пошкоджено", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+
             MessageBox.Show("Завантажено", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
-            if (Global.experiments.Count == 0)
-            {
-                return;
-            }
-
             dataGridView1.Rows.Clear();
+            dataGridView1.RowCount = Global.experiments.Count;
             int i = 0;
             foreach (Experiment exp in Global.experiments)
             {
-                //dataGridView1.Rows[i].Cells[0].Value = (i + 1);
+                dataGridView1.Rows[i].Cells[0].Value = (i + 1);
                 dataGridView1.Rows[i].Cells[1].Value = exp.experimentType;
 
                 Image temp;

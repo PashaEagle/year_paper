@@ -14,11 +14,9 @@ C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CopyComplete
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.TestForm.resources
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.TestResultsForm.resources
-C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AfterTestForm.resources
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AnalyzeTestForm.resources
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.BeforeTestForm.resources
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.EditTestForm.resources
-C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.TeacherForm.resources
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\Xceed.Words.NET.dll
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.PasswordForm.resources
 C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
@@ -42,3 +40,4 @@ C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\W
 C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Developer.resources
+C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Developer.resources

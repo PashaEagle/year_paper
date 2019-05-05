@@ -47,7 +47,7 @@ namespace WindowsFormsApp2
         private void EditTestForm_Load(object sender, EventArgs e)
         {
             panel1.Enabled = false;
-
+            label1.Text = "Питання:";
             bDelete.Enabled = false;
             bEdit.Enabled = false;
 
