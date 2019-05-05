@@ -28,6 +28,7 @@ namespace WindowsFormsApp2
             };
             timer1.Tick += OnTickHandler;
             timer1.Enabled = true;
+            Global.finalPoints = 0;
         }
 
         private void OnTickHandler(object sender, EventArgs e)
