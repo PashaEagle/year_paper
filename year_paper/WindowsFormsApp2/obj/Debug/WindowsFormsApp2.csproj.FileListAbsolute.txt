@@ -39,5 +39,5 @@ C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\W
 C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
 C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
-C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Developer.resources
 C:\Users\Pasha Eagle\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Developer.resources
+C:\Users\Ira_Eagles\Documents\year_paper\year_paper\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.DeveloperForm.resources

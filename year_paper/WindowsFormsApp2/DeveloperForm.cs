@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class Developer : Form
+    public partial class DeveloperForm : Form
     {
-        public Developer()
+        public DeveloperForm()
         {
             InitializeComponent();
         }

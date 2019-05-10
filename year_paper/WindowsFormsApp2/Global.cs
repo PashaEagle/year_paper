@@ -24,7 +24,7 @@ namespace WindowsFormsApp2
         public static bool[] correctAnswers = new bool[10];
 
         //### Open Test Properties ###
-        public static int maxQuestionsLimit = 30;
+        public static int maxQuestionsLimit = 50;
         public static string currentTestFilePath = "null";
         public static List<TestQuestion> currentTestQuestions;
 

@@ -50,12 +50,12 @@
             this.історичніПостатіToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.типовіЗадачіToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.зІсторіїToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.парадоксиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проПрограмуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проПрограмуToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.TimeNow = new System.Windows.Forms.Timer(this.components);
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TimeNow = new System.Windows.Forms.Timer(this.components);
+            this.абеткаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -231,7 +231,7 @@
             this.історичніПостатіToolStripMenuItem,
             this.типовіЗадачіToolStripMenuItem,
             this.зІсторіїToolStripMenuItem,
-            this.парадоксиToolStripMenuItem});
+            this.абеткаToolStripMenuItem});
             this.цікавіЗадачіToolStripMenuItem.Name = "цікавіЗадачіToolStripMenuItem";
             this.цікавіЗадачіToolStripMenuItem.Size = new System.Drawing.Size(286, 26);
             this.цікавіЗадачіToolStripMenuItem.Text = "Інтернет-ресурси";
@@ -239,28 +239,23 @@
             // історичніПостатіToolStripMenuItem
             // 
             this.історичніПостатіToolStripMenuItem.Name = "історичніПостатіToolStripMenuItem";
-            this.історичніПостатіToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.історичніПостатіToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.історичніПостатіToolStripMenuItem.Text = "Терміни";
             this.історичніПостатіToolStripMenuItem.Click += new System.EventHandler(this.історичніПостатіToolStripMenuItem_Click);
             // 
             // типовіЗадачіToolStripMenuItem
             // 
             this.типовіЗадачіToolStripMenuItem.Name = "типовіЗадачіToolStripMenuItem";
-            this.типовіЗадачіToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.типовіЗадачіToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.типовіЗадачіToolStripMenuItem.Text = "Типові задачі";
             this.типовіЗадачіToolStripMenuItem.Click += new System.EventHandler(this.типовіЗадачіToolStripMenuItem_Click);
             // 
             // зІсторіїToolStripMenuItem
             // 
             this.зІсторіїToolStripMenuItem.Name = "зІсторіїToolStripMenuItem";
-            this.зІсторіїToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
+            this.зІсторіїToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.зІсторіїToolStripMenuItem.Text = "З історії..";
-            // 
-            // парадоксиToolStripMenuItem
-            // 
-            this.парадоксиToolStripMenuItem.Name = "парадоксиToolStripMenuItem";
-            this.парадоксиToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
-            this.парадоксиToolStripMenuItem.Text = "Парадокси ТЙ";
+            this.зІсторіїToolStripMenuItem.Click += new System.EventHandler(this.зІсторіїToolStripMenuItem_Click);
             // 
             // проПрограмуToolStripMenuItem
             // 
@@ -291,16 +286,23 @@
             this.statusStrip1.TabIndex = 31;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // TimeNow
-            // 
-            this.TimeNow.Tick += new System.EventHandler(this.TimeNow_Tick_1);
-            // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Font = new System.Drawing.Font("Lucida Sans Typewriter", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(197, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
+            // TimeNow
+            // 
+            this.TimeNow.Tick += new System.EventHandler(this.TimeNow_Tick_1);
+            // 
+            // абеткаToolStripMenuItem
+            // 
+            this.абеткаToolStripMenuItem.Name = "абеткаToolStripMenuItem";
+            this.абеткаToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
+            this.абеткаToolStripMenuItem.Text = "Алфавіт";
+            this.абеткаToolStripMenuItem.Click += new System.EventHandler(this.абеткаToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -357,10 +359,10 @@
         private System.Windows.Forms.ToolStripMenuItem історичніПостатіToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem типовіЗадачіToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem зІсторіїToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem парадоксиToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Timer TimeNow;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripMenuItem абеткаToolStripMenuItem;
     }
 }
 

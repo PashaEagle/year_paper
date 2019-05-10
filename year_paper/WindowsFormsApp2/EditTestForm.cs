@@ -78,7 +78,7 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Виберіть питання");
                 return;
             }
-            if (MessageBox.Show("Ви дійсно хочете безвозвратно видалити це питання?", "Видалення", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show("Ви дійсно хочете видалити це питання?", "Видалення", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 Global.currentTestQuestions.RemoveAt(index);
                 RefreshQBox();
@@ -108,18 +108,22 @@ namespace WindowsFormsApp2
                 MessageBox.Show("Питання успішно збережено");
                 panel2.Enabled = false;
                 panel3.Enabled = true;
+                створитиНовийToolStripMenuItem.Enabled = true;
+                редагуватиНаявнийToolStripMenuItem.Enabled = true;
+                назадToolStripMenuItem.Enabled = true;
             }
             else
             {
-                MessageBox.Show("Будь ласка заповніть всі поля і відмітьте правиьну відповідь");
+                MessageBox.Show("Будь ласка заповніть всі поля і відмітьте правильну відповідь");
             }
+          
         }
 
         private void bSave_Click(object sender, EventArgs e)
         {
             if (Global.currentTestQuestions.Count < 10)
             {
-                if (MessageBox.Show("Ви збираєетсь зберегти файл в якому менше 10 питань. Зауважте що пройти тест по ньому буде неможливо. Всеодно зберегти ?", "Збереження", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+                if (MessageBox.Show("Ви збираєетсь зберегти файл в якому менше 10 питань. Він буде недоступним для тестування. Всеодно зберегти ?", "Збереження", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
                     return;
             }
 
@@ -174,7 +178,7 @@ namespace WindowsFormsApp2
             }
             else
             {
-                MessageBox.Show("Максимальна кількість питань - 30");
+                MessageBox.Show("Максимальна кількість питань - 50");
             }
            
         }
@@ -209,7 +213,7 @@ namespace WindowsFormsApp2
                 string textParagraph = "";
 
                 Xceed.Words.NET.Formatting titleFormat = new Xceed.Words.NET.Formatting();
-                titleFormat.Size = 26;
+                titleFormat.Size = 20;
                 titleFormat.Position = 40;
                 titleFormat.FontColor = System.Drawing.Color.Navy;
                 titleFormat.Italic = true;
@@ -255,7 +259,7 @@ namespace WindowsFormsApp2
                 }
                 catch (Exception ee)
                 {
-                    MessageBox.Show("Помилка при завантаженні. Можливо файл пошкоджено");
+                    MessageBox.Show("Помилка при завантаженні. Можливо файл пошкоджено.");
                     return;
                 }
 
@@ -272,7 +276,6 @@ namespace WindowsFormsApp2
                 panel2.Enabled = false;
 
                 RefreshQBox();
-
             }
         }
 
@@ -291,12 +294,12 @@ namespace WindowsFormsApp2
 
                 File.Create(Global.currentTestFilePath);
 
-                panel1.Visible = true;
+                panel1.Enabled = true;
                 редагуватиНаявнийToolStripMenuItem.Enabled = false;
                 створитиНовийToolStripMenuItem.Enabled = false;
-                назадToolStripMenuItem.Enabled = false;
-                panel2.Enabled = false;
-
+                назадToolStripMenuItem.Enabled = true;
+                panel2.Enabled = true;
+                panel3.Enabled = true;
             }
         }
 

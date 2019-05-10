@@ -319,7 +319,7 @@ namespace WindowsFormsApp2
 
         private void проПрограмуToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Developer developer = new Developer();
+            DeveloperForm developer = new DeveloperForm();
             developer.Show();
         }
 
@@ -329,6 +329,16 @@ namespace WindowsFormsApp2
         {
             toolStripStatusLabel1.Text = DateTime.Now.Day.ToString() +"/"+ DateTime.Now.Month.ToString()+ "/"+ DateTime.Now.Year.ToString()+ "   " + DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
             TimeNow.Start();
+        }
+
+        private void зІсторіїToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://uk.wikipedia.org/wiki/%D0%86%D1%81%D1%82%D0%BE%D1%80%D1%96%D1%8F_%D1%82%D0%B5%D0%BE%D1%80%D1%96%D1%97_%D0%B9%D0%BC%D0%BE%D0%B2%D1%96%D1%80%D0%BD%D0%BE%D1%81%D1%82%D1%96");
+        }
+
+        private void абеткаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://images.ua.prom.st/365759558_stend-gretska-i.jpg");
         }
     }
 }

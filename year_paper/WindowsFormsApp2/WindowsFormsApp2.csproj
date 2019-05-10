@@ -62,11 +62,11 @@
     <Compile Include="BeforeTestForm.Designer.cs">
       <DependentUpon>BeforeTestForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Developer.cs">
+    <Compile Include="DeveloperForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Developer.Designer.cs">
-      <DependentUpon>Developer.cs</DependentUpon>
+    <Compile Include="DeveloperForm.Designer.cs">
+      <DependentUpon>DeveloperForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EditTestForm.cs">
       <SubType>Form</SubType>
@@ -119,8 +119,8 @@
     <EmbeddedResource Include="BeforeTestForm.resx">
       <DependentUpon>BeforeTestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Developer.resx">
-      <DependentUpon>Developer.cs</DependentUpon>
+    <EmbeddedResource Include="DeveloperForm.resx">
+      <DependentUpon>DeveloperForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditTestForm.resx">
       <DependentUpon>EditTestForm.cs</DependentUpon>

@@ -14,7 +14,7 @@ namespace WindowsFormsApp2
     public partial class TestForm : Form
     {
                        
-        const int SecondsCount = 120;
+        const int SecondsCount = 150;
 
         public TestForm()
         {
@@ -46,11 +46,11 @@ namespace WindowsFormsApp2
                 label1.Visible = true;
                 button1.Visible = true;
                 button2.Visible = true;
-                label1.Text = "Ваш результат " + Global.finalPoints.ToString() + " балів";
-                Global.participants.Add(new TestParticipant(Global.activeParticipantName, Global.activeParticipantGroup, Global.finalPoints, DateTime.Now.ToString()));
+                //label1.Text = Global.activeParticipantName.ToString() + ", Ваш результат " + Global.finalPoints.ToString() + " балів";
+               // Global.participants.Add(new TestParticipant(Global.activeParticipantName, Global.activeParticipantGroup, Global.finalPoints, DateTime.Now.ToString()));
 
-                var json = JsonConvert.SerializeObject(Global.participants);
-                File.WriteAllText(Global.pathToDefaultParticipantFile, json);
+               // var json = JsonConvert.SerializeObject(Global.participants);
+               // File.WriteAllText(Global.pathToDefaultParticipantFile, json);
             }
         }
 
@@ -66,8 +66,10 @@ namespace WindowsFormsApp2
                 button4.Visible = false;
                 button3.Visible = false;
                 label1.Visible = true;
+                label2.Visible = false;
                 button1.Visible = true;
                 button2.Visible = true;
+                timer1.Stop();
                 label1.Text = Global.activeParticipantName.ToString() + ", Ваш результат " + Global.finalPoints.ToString() + " балів";
                 Global.participants.Add(new TestParticipant(Global.activeParticipantName, Global.activeParticipantGroup, Global.finalPoints, DateTime.Now.ToString()));
 
@@ -95,8 +97,6 @@ namespace WindowsFormsApp2
             label2.Text = "Час вийшов!";
             button1.Text = "На головну";
             button2.Text = "Детальніше";
-            //button3.Text = "Завершити";
-            //button4.Text = "Далі";
             Global.random10Questions = new List<TestQuestion>();
             for (int i = 0; i < 10; ++i)
             {
@@ -168,9 +168,10 @@ namespace WindowsFormsApp2
             progressBar1.Visible = false;
             timer1.Stop();
             label1.Visible = true;
+            label1.Visible = false;
             button1.Visible = true;
             button2.Visible = true;
-            label1.Text = "Ваш результат " + Global.finalPoints.ToString() + " балів";
+            label1.Text = Global.activeParticipantName.ToString() + ", Ваш результат " + Global.finalPoints.ToString() + " балів";
             Global.participants.Add(new TestParticipant(Global.activeParticipantName, Global.activeParticipantGroup, Global.finalPoints, DateTime.Now.ToString()));
 
             var json = JsonConvert.SerializeObject(Global.participants);
